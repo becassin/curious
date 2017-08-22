@@ -1,0 +1,10 @@
+global-styling:
+  css:
+    component:
+      css/style.css: {}
+      js/vendor/magnific_popup/dist/magnific-popup.css: {}
+  js:
+    js/vendor/isotope/isotope.pkgd.min.js: {}
+    js/vendor/magnific_popup/dist/jquery.magnific-popup.js: {}
+    js/custom.js: {}
+    
