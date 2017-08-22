@@ -5,9 +5,6 @@
   Drupal.behaviors.customJS = {
     attach: function (context, settings) {
       
-      console.log(32);
-
-      
       // init Isotope
       var $grid = $('#block-curious-content').isotope({
         // options
@@ -28,6 +25,12 @@
         gallery:{
           enabled:true
         }
+      });
+      
+      $('.block-views-blockvideo-gallery-block-1').magnificPopup({
+        delegate: '.views-row a', // child items selector, by clicking on it popup will open
+        type: 'iframe',
+        // other options
       });
       
     }

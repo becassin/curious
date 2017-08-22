@@ -6,3 +6,8 @@ body {
 	position: absolute;
 	top: -51px;
 }
+
+.media--loading::before {
+	content: '';
+	display: none;
+}
