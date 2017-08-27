@@ -15,7 +15,7 @@ h2 {
 .h1, .h2, .h3, h1, h2, h3 {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-top: 40px;
+	padding-top: 80px;
 	padding-bottom: 40px;
 }
 
@@ -58,6 +58,10 @@ a:focus {
 	&::after {
 		background: rgba(0, 0, 0, 0.50);
 	}
+	
+	& + .container {
+		display: none;
+	}
 }
 
 // Videos
@@ -76,7 +80,7 @@ a:focus {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.50);
+		background: rgba(0, 0, 0, 0.90);
 	}
 	
 	#block-views-block-video-gallery-block-1 {
@@ -141,7 +145,7 @@ a:focus {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.50);
+		background: rgba(0, 0, 0, 0.80);
 	}
 	
 	.content_layout {
@@ -169,6 +173,7 @@ a:focus {
 // Contact
 .bottom-widgets {
 	background-color: black;
+	padding: 0;
 	
 	.row {
 		position: relative;
@@ -199,10 +204,54 @@ a:focus {
 
 // Gear List
 .gear-widgets {
+	background: url(../img/guitar.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	text-align: center;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.90);
+	}
+	
+	.container {
+		z-index: 2;
+		position: relative;
+	}
 	
 }
 
 // Reviews
 .reviews-widgets {
+	background: url(../img/freshies.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	text-align: center;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.70);
+	}
+	
+	.container {
+		z-index: 2;
+		position: relative;
+		
+		.row  h2{
+			padding-top: 0;
+		}
+	}
 	
 }

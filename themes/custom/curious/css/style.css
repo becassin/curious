@@ -11,7 +11,7 @@ h2 {
 .h1, .h2, .h3, h1, h2, h3 {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 40px;
 }
 
@@ -50,6 +50,9 @@ a:focus {
 .main-header::after {
   background: rgba(0, 0, 0, 0.5);
 }
+.main-header + .container {
+  display: none;
+}
 
 .region-videos {
   background: url(../img/drums.jpg);
@@ -66,7 +69,7 @@ a:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
 }
 .region-videos #block-views-block-video-gallery-block-1 {
   position: relative;
@@ -115,7 +118,7 @@ a:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
 }
 #wrapper .content_layout {
   position: relative;
@@ -134,6 +137,7 @@ a:focus {
 
 .bottom-widgets {
   background-color: black;
+  padding: 0;
 }
 .bottom-widgets .row {
   position: relative;
@@ -152,6 +156,51 @@ a:focus {
 }
 .bottom-widgets h2 {
   text-align: center;
+}
+
+.gear-widgets {
+  background: url(../img/guitar.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+.gear-widgets::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+.gear-widgets .container {
+  z-index: 2;
+  position: relative;
+}
+
+.reviews-widgets {
+  background: url(../img/freshies.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+.reviews-widgets::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.reviews-widgets .container {
+  z-index: 2;
+  position: relative;
+}
+.reviews-widgets .container .row h2 {
+  padding-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
