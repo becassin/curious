@@ -13,3 +13,34 @@
 
 //   $variables['fields']['extra_class'] = '';
 // }
+
+function curious_preprocess_page(&$variables) {
+
+  // Add Responsive class for gear Widget.
+  if (!empty($variables['page']['gear_first']) && !empty($variables['page']['gear_second']) && !empty($variables['page']['gear_third']) && !empty($variables['page']['gear_forth'])) {
+    $variables['gear_class'] = 'col-md-3';
+  }
+  else if (!empty($variables['page']['gear_first']) && !empty($variables['page']['gear_second']) && !empty($variables['page']['gear_third'])) {
+    $variables['gear_class'] = 'col-md-4';
+  }
+  else if((!empty($variables['page']['gear_first']) && !empty($variables['page']['gear_second'])) or (!empty($variables['page']['gear_first']) && !empty($variables['page']['gear_third'])) or (!empty($variables['page']['gear_third']) && !empty($variables['page']['gear_second']))) {
+    $variables['gear_class'] = 'col-md-6';
+  }
+  else {
+    $variables['gear_class'] = 'col-md-12';
+  }
+  
+    // Add Responsive class for reviews Widget.
+  if (!empty($variables['page']['reviews_first']) && !empty($variables['page']['reviews_second']) && !empty($variables['page']['reviews_third']) && !empty($variables['page']['reviews_forth'])) {
+    $variables['reviews_class'] = 'col-md-3';
+  }
+  else if (!empty($variables['page']['reviews_first']) && !empty($variables['page']['reviews_second']) && !empty($variables['page']['reviews_third'])) {
+    $variables['reviews_class'] = 'col-md-4';
+  }
+  else if((!empty($variables['page']['reviews_first']) && !empty($variables['page']['reviews_second'])) or (!empty($variables['page']['reviews_first']) && !empty($variables['page']['reviews_third'])) or (!empty($variables['page']['reviews_third']) && !empty($variables['page']['reviews_second']))) {
+    $variables['reviews_class'] = 'col-md-6';
+  }
+  else {
+    $variables['reviews_class'] = 'col-md-12';
+  }
+}
