@@ -12,6 +12,17 @@ h2 {
 	color: $text-color;
 }
 
+.h1, .h2, .h3, h1, h2, h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+h2, .h2 {
+	font-size: 30px;
+}
+
 a:focus {
 	outline: none;
 }
@@ -25,6 +36,7 @@ a:focus {
 .main-header .navbar {
 	position: fixed;
 	width: 100%;
+	z-index: 10;
 }
 
 // Header
@@ -33,6 +45,7 @@ a:focus {
 	background-size: cover;
 	background-position: center;
 	min-height: 100vh;
+	margin: 0;
 	
 	.welcome-banner-text {
 		position: absolute;
@@ -49,9 +62,66 @@ a:focus {
 
 // Videos
 .region-videos {
+	background: url(../img/drums.jpg);
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	position: relative;
+	text-align: center;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.50);
+	}
+	
+	#block-views-block-video-gallery-block-1 {
+		position: relative;
+		z-index: 2;
+		
+		.blazy--grid .grid__content {
+			position: relative;
+			
+			.views-field-title {
+				position: absolute;
+				bottom: 0;
+				left: 5px;
+				display: none;
+			}
+			
+			.views-field-field-video a::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				
+			}
+			
+			&:hover {
+				.views-field-title {
+					display: block;
+				}
+				.views-field-field-video a::after {
+					background: rgba(0, 0, 0, 0.50);
+				}
+			}
+		}
+		
+	}
+	
 	.media--loading::before {
 		content: '';
 		display: none;
+	}
+	
+	h2 {
+		
 	}
 }
 
