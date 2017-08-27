@@ -60,7 +60,7 @@
 
 
 <!-- Header and Navbar -->
-<header class="main-header">
+<header class="main-header" id="main-header">
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="row">
@@ -167,6 +167,11 @@
 {% endif %}
 <!-- End Page Title ---- >
 
+{% if page.videos %}
+  <div class="row">
+    {{ page.videos }}
+  </div>
+{% endif %}
 
 <!-- layout -->
 <div id="wrapper">

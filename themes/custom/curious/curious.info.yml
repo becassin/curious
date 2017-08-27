@@ -22,6 +22,7 @@ regions:
   highlighted: 'Highlighted' 
   page_title: 'Page Title'
   breadcrumb: 'Breadcrumb'
+  videos: 'Videos'
   content: 'Content'
   sidebar_first: 'Left Sidebar'
   sidebar_second: 'Right Sidebar'  

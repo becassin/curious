@@ -1,22 +1,79 @@
+// General
+$background-color: #243324;
+$text-color: white;
+
 body {
-	background-color: green !important;
+	font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+	background: $background-color;
+	color: $text-color;
 }
 
+h2 {
+	color: $text-color;
+}
+
+a:focus {
+	outline: none;
+}
+
+// Logo
+#block-curious-branding {
+	display: none;
+}
+
+// Menu
+.main-header .navbar {
+	position: fixed;
+	width: 100%;
+}
+
+// Header
 .main-header {
-
-	.navbar {
-		position: fixed;
-		width: 100%;
-
+	background: url(../img/green_room_main.jpg);
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	
+	.welcome-banner-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 5;
+	}
+	
+	&::after {
+		background: rgba(0, 0, 0, 0.50);
 	}
 }
 
-.filter-button-group {
-	position: absolute;
-	top: -51px;
+// Videos
+.region-videos {
+	.media--loading::before {
+		content: '';
+		display: none;
+	}
 }
 
-.media--loading::before {
-	content: '';
-	display: none;
+// Photos
+#wrapper {
+	.filter-button-group {
+		position: absolute;
+		top: -51px;
+	}
+}
+
+// Contact
+.bottom-widgets {
+	
+}
+
+// Gear List
+.gear-widgets {
+	
+}
+
+// Reviews
+.reviews-widgets {
+	
 }

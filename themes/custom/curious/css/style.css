@@ -1,5 +1,19 @@
 body {
-  background-color: green !important;
+  font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+  background: #243324;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+a:focus {
+  outline: none;
+}
+
+#block-curious-branding {
+  display: none;
 }
 
 .main-header .navbar {
@@ -7,14 +21,31 @@ body {
   width: 100%;
 }
 
-.filter-button-group {
+.main-header {
+  background: url(../img/green_room_main.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+.main-header .welcome-banner-text {
   position: absolute;
-  top: -51px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.main-header::after {
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.media--loading::before {
+.region-videos .media--loading::before {
   content: '';
   display: none;
+}
+
+#wrapper .filter-button-group {
+  position: absolute;
+  top: -51px;
 }
 
 /*# sourceMappingURL=style.css.map */

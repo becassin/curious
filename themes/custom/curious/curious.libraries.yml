@@ -1,7 +1,7 @@
 global-styling:
   css:
     component:
-      css/style.css: {}
+      css/style.css: {weight: 200}
       js/vendor/magnific_popup/dist/magnific-popup.css: {}
   js:
     js/vendor/isotope/isotope.pkgd.min.js: {}
