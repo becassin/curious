@@ -138,6 +138,7 @@ a:focus {
 .bottom-widgets {
   background-color: black;
   padding: 0;
+  min-height: 100vh;
 }
 .bottom-widgets .row {
   position: relative;
@@ -185,7 +186,6 @@ a:focus {
   background-position: center;
   position: relative;
   text-align: center;
-  min-height: 100vh;
 }
 .reviews-widgets::after {
   content: "";
