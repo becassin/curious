@@ -100,9 +100,58 @@ a:focus {
   display: none;
 }
 
-#wrapper .filter-button-group {
+#wrapper {
+  background: url(../img/monitor.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+}
+#wrapper::after {
+  content: "";
   position: absolute;
-  top: -51px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#wrapper .content_layout {
+  position: relative;
+  z-index: 2;
+}
+#wrapper .filter-button-group button {
+  background: transparent;
+  border: none;
+}
+#wrapper .gallery-images {
+  position: relative;
+}
+#wrapper .gallery-images .views-field-field-room {
+  display: none;
+}
+
+.bottom-widgets {
+  background-color: black;
+}
+.bottom-widgets .row {
+  position: relative;
+}
+.bottom-widgets .row > .col-md-6:nth-child(2) {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.bottom-widgets .row > .col-md-6:nth-child(3) {
+  float: right;
+}
+.bottom-widgets .region {
+  background-color: inherit;
+}
+.bottom-widgets h2 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
