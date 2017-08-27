@@ -1,0 +1,13 @@
+body {
+	background-color: green !important;
+}
+
+.filter-button-group {
+	position: absolute;
+	top: -51px;
+}
+
+.media--loading::before {
+	content: '';
+	display: none;
+}

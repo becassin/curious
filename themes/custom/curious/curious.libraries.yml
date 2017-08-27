@@ -7,4 +7,6 @@ global-styling:
     js/vendor/isotope/isotope.pkgd.min.js: {}
     js/vendor/magnific_popup/dist/jquery.magnific-popup.js: {}
     js/custom.js: {}
+    http://curious.dev:35729/livereload.js:
+      type: external
     
