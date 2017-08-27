@@ -2,6 +2,11 @@ body {
   background-color: green !important;
 }
 
+.main-header .navbar {
+  position: fixed;
+  width: 100%;
+}
+
 .filter-button-group {
   position: absolute;
   top: -51px;
