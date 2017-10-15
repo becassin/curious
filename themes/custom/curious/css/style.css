@@ -23,10 +23,6 @@ a:focus {
   outline: none;
 }
 
-#block-curious-branding {
-  display: none;
-}
-
 .main-header .navbar {
   position: fixed;
   width: 100%;
@@ -39,13 +35,38 @@ a:focus {
   background-position: center;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
 }
 .main-header .welcome-banner-text {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+.main-header .block-views-blockhome-slider-block-1 .views_slideshow_cycle_main .views_slideshow_cycle_teaser_section {
+  width: 100% !important;
+}
+.main-header .block-views-blockhome-slider-block-1 .views_slideshow_cycle_main .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide {
+  width: 100% !important;
+}
+.main-header .block-views-blockhome-slider-block-1 .views_slideshow_cycle_main .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.main-header .block-views-blockhome-slider-block-1 .views-slideshow-controls-bottom {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 3;
+  width: 100%;
+  text-align: left;
+}
+.main-header .block-views-blockhome-slider-block-1 .views-slideshow-controls-bottom #views_slideshow_controls_text_pause_home_slider-block_1 {
+  display: none;
+}
+.main-header .block-views-blockhome-slider-block-1 .views-slideshow-controls-bottom #views_slideshow_controls_text_next_home_slider-block_1 {
+  float: right;
 }
 .main-header::after {
   background: rgba(0, 0, 0, 0.5);

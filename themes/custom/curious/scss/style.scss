@@ -29,7 +29,7 @@ a:focus {
 
 // Logo
 #block-curious-branding {
-	display: none;
+	// display: none;
 }
 
 // Menu
@@ -46,13 +46,47 @@ a:focus {
 	background-position: center;
 	min-height: 100vh;
 	margin: 0;
+	padding: 0;
 	
 	.welcome-banner-text {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 5;
+		width: 100%;
+		max-width: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.block-views-blockhome-slider-block-1 {
+		
+		.views_slideshow_cycle_main .views_slideshow_cycle_teaser_section {
+			width: 100% !important;
+			
+			.views_slideshow_cycle_slide {
+				width: 100% !important;
+				
+				img {
+					display: block;
+					width: 100vw;
+					height: 100vh;
+					object-fit: cover;
+				}
+			}
+		}
+		
+		.views-slideshow-controls-bottom {
+			position: absolute;
+			top: 50%;
+			z-index: 3;
+			width: 100%;
+			text-align: left;
+			
+			#views_slideshow_controls_text_pause_home_slider-block_1 {
+				display: none;
+			}
+			
+			#views_slideshow_controls_text_next_home_slider-block_1 {
+				float: right;
+			}
+		}
 	}
 	
 	&::after {
