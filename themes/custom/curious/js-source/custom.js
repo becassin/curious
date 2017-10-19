@@ -36,6 +36,7 @@
       $('.blazy--grid').magnificPopup({
         delegate: '.grid a', // child items selector, by clicking on it popup will open
         type: 'iframe',
+        mainClass: 'mfp-fade'
         // other options
       });
       
@@ -86,7 +87,7 @@
         count = 0;
       
       for (var i = elms.length - 1; i >= 0; i--) {
-        $(elms[i]).hide();
+        // $(elms[i]).hide();
       }
       
       function myFunc() {
@@ -102,6 +103,15 @@
       
       setTimeout(myFunc, intervalInit);
        
+      
+    }
+  };
+
+  Drupal.behaviors.sliderHeader = {
+    attach: function (context, settings) {
+      
+      $('.views_slideshow_controls_text_previous').html(' ◅');
+      $('.views_slideshow_controls_text_next').html('▻ ');
       
     }
   };

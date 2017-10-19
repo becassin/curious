@@ -1,5 +1,5 @@
 // General
-$background-color: #243324;
+$background-color: black;
 $text-color: white;
 
 body {
@@ -32,11 +32,36 @@ a:focus {
 	// display: none;
 }
 
-// Menu
-.main-header .navbar {
-	position: fixed;
-	width: 100%;
-	z-index: 10;
+// Topbar
+.main-header {
+	
+	.brand.logo {
+		display: none;
+	} 
+	
+	.site-branding__name {
+		text-align: center;
+		line-height: 26px;
+		margin-top: 1em;
+		
+		a:hover {
+			text-decoration: none;
+		}
+		
+		.title_top {
+			font-size: smaller;
+		}
+		
+		.title_bottom {
+			
+		}
+	}
+	
+	.navbar {
+		position: fixed;
+		width: 100%;
+		z-index: 10;
+	}
 }
 
 // Header
@@ -53,6 +78,10 @@ a:focus {
 		max-width: none;
 		padding: 0;
 		margin: 0;
+		
+		.block-views {
+			margin: 0;
+		}
 	}
 	
 	.block-views-blockhome-slider-block-1 {
@@ -78,6 +107,12 @@ a:focus {
 			z-index: 3;
 			width: 100%;
 			text-align: left;
+			font-size: 50px;
+			opacity: 0.7;
+			
+			span {
+				cursor: pointer;
+			}
 			
 			#views_slideshow_controls_text_pause_home_slider-block_1 {
 				display: none;
@@ -99,69 +134,78 @@ a:focus {
 }
 
 // Videos
-.region-videos {
-	background: url(../img/drums.jpg);
-	background-size: cover;
-	background-position: center;
-	min-height: 100vh;
-	position: relative;
-	text-align: center;
-	
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.90);
-	}
-	
-	#block-views-block-video-gallery-block-1 {
+.row#videos {
+		background: url(../img/drums.jpg);
+		background-size: cover;
+		background-position: center;
+		min-height: 100vh;
 		position: relative;
-		z-index: 2;
+		text-align: center;
+	
+	.region-videos {
 		
-		.blazy--grid .grid__content {
-			position: relative;
-			
-			.views-field-title {
-				position: absolute;
-				bottom: 0;
-				left: 5px;
-				display: none;
-			}
-			
-			.views-field-field-video a::after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				
-			}
-			
-			&:hover {
-				.views-field-title {
-					display: block;
-				}
-				.views-field-field-video a::after {
-					background: rgba(0, 0, 0, 0.50);
-				}
-			}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.90);
 		}
 		
-	}
-	
-	.media--loading::before {
-		content: '';
-		display: none;
-	}
-	
-	h2 {
+		#block-views-block-video-gallery-block-1 {
+			position: relative;
+			z-index: 2;
+			
+			.blazy--grid .grid__content {
+				position: relative;
+				
+				.views-field-title {
+					position: absolute;
+					bottom: 0;
+					left: 5px;
+					display: none;
+				}
+				
+				.views-field-field-video a::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					
+				}
+				
+				&:hover {
+					.views-field-title {
+						display: block;
+					}
+					.views-field-field-video a::after {
+						background: rgba(0, 0, 0, 0.50);
+					}
+				}
+			}
+			
+		}
 		
+		.media--loading::before {
+			content: '';
+			display: none;
+		}
+		
+		h2 {
+			
+		}
 	}
 }
+
+// Iframe
+.mfp-iframe-holder .mfp-content {
+	max-width: 1100px;
+}
+
 
 // Photos
 #wrapper {
@@ -234,6 +278,11 @@ a:focus {
 	
 	h2 {
 		text-align: center;
+	}
+	
+	.contact-message-feedback-form {
+		background: transparent;
+		border: none;
 	}
 }
 
